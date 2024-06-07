@@ -31,8 +31,10 @@ app.get('/audio', async (req, res) => {
   }
 });
 
-app.get('/playlist', async (req, res) => {
-  const { playlistUrl } = req.query;
+app.get('/playlist:id', async (req, res) => {
+  const { playlistUrl } = '';
+  console.log("req",req)
+  return
 
   try {
     const browser = await puppeteer.launch();
